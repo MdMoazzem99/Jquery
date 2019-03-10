@@ -1,0 +1,39 @@
+/*slideUp, slideDown, slideToggle start*/
+/*slideToggle start*/
+#st{
+	text-align: center;
+	border: 2px solid blue;
+	padding: 10px 0px;
+	display: none;
+}
+.btn_12{
+	text-align: center;
+	border: 2px solid red;
+	background-color: green;
+}
+/*slideToggle start*/
+/*slideUp, slideDown, slideToggle end*/
+/*Even, Odd, First, Last & Nth Element Selectors start*/
+.odd{
+    background: orange;
+    padding: 10px;
+}
+.even{
+    background: skyblue;
+    padding: 10px;
+}
+
+.first{
+    background: #b2dba1;
+    padding: 10px;
+}
+.last{
+    background: #f2dede;
+    padding: 10px;
+}
+.nth{
+    background: maroon;
+    color: oldlace;
+    padding: 10px;
+}
+/*Even, Odd, First, Last & Nth Element Selectors end*/

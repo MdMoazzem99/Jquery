@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- media css -->
+    <link rel="stylesheet" href="css/media.css">
+
+    <title>Jquery</title>
+  </head>
+  <body>
+    <span style="font-size: 40px">Alert</span><br>
+    <button type="button" class="btn_1 btn-danger">click me</button>
+	<button type="button" id="btn_1" class="btn-danger">click me</button><br>
+	<span>Hello world</span><br>
+	<span style="font-size: 40px">Show, Hide, Toggle</span><br>
+	<span style="font-size: 30px" id="s_h_1">Show And Hide</span><br>
+	<button type="button" class="btn_2 btn-danger">hide</button>
+	<button type="button" class="btn_3 btn-danger">show</button><br>
+	<span style="font-size: 30px" id="s_h_2">Show And Hide</span><br>
+	<button type="button" class="btn_4 btn-danger">toggle</button><br>
+	<span style="font-size: 40px">fadeIn, fadeOut, fadeToggle, fadeTo</span><br>
+	<span style="font-size: 30px" id="fi_fo">fadeIn, fadeOut</span><br>
+	<button type="button" class="btn_5 btn-danger">fadeIn</button>
+	<button type="button" class="btn_6 btn-danger">fadeOut</button><br>
+	<span style="font-size: 30px" id="ftog">fadeToggle</span><br>
+	<button type="button" class="btn_7 btn-danger">fadeToggle</button><br>
+	<span style="font-size: 30px" id="fto">fadeTo</span><br>
+	<button type="button" class="btn_8 btn-danger">fadeTo</button>
+	<button type="button" class="btn_9 btn-danger">fadeTo</button><br>
+	<span style="font-size: 40px">slideUp, slideDown, slideToggle</span><br>
+	<span style="font-size: 30px" id="su_sd">slideUp, slideDown</span><br>
+	<button type="button" class="btn_10 btn-danger">slideUp</button>
+	<button type="button" class="btn_11 btn-danger">slideDown</button><br>
+	<span style="font-size: 30px" id="st">slideToggle</span><br>
+	<div type="button" class="btn_12">slideToggle</div><br>
+	<span style="font-size: 40px">Even, Odd, First, Last & Nth Element Selectors</span><br>
+	<ul class="list-unstyled">
+        <li>Home</li>
+        <li>About</li>
+        <li>Photo Gallery</li>
+        <li>Project</li>
+        <li>Webmail</li>
+        <li>Company Profile</li>
+        <li>Contact Us</li>
+	</ul><br>
+	<span style="font-size: 40px">This, Header, Not Selectors</span><br>
+	<span style="font-size: 30px">This Selectors</span>
+	<p>This is Rifat</p>
+	<p>This is Rahat</p>
+	<p>This is Ridoy</p>
+	<p>This is Momo</p>
+	<p>This is Eva</p>
+	<span style="font-size: 30px">Header Selectors</span>
+	<h1>This is Rifat</h1>
+	<h2>This is Rahat</h2>
+	<h3>This is Ridoy</h3>
+	<h4>This is Momo</h4>
+	<h5>This is Eva</h5>
+	<h6>This is You</h6>
+
+
+
+
+
+    <!-- jquery links -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		// Alert start
+    		$(".btn_1").click(function(){
+    			alert("Hello world");
+    		});
+    		$("#btn_1").click(function(){
+    			alert("Hello world");
+    		});
+    		$("span").click(function(){
+    			alert("Hello world");
+    		});
+    		// Alert end
+    		// Show, Hide, Toggle start
+    		$(".btn_2").click(function(){
+    			$("#s_h_1").hide(2000);
+    		});
+    		$(".btn_3").click(function(){
+    			$("#s_h_1").show("slow");
+    		});
+    		$(".btn_4").click(function(){
+    			$("#s_h_2").toggle("fast");
+    		});
+			// Show, Hide, Toggle end
+			// fadeIn, fadeOut, fadeToggle, fadeTo start
+			$(".btn_5").click(function(){
+				$("#fi_fo").fadeIn(2000);
+			});
+			$(".btn_6").click(function(){
+				$("#fi_fo").fadeOut("slow");
+			});
+			$(".btn_7").click(function(){
+				$("#ftog").fadeToggle("fast");
+			});
+			$(".btn_8").click(function(){
+				$("#fto").fadeTo(2000,0.7);
+			});
+			$(".btn_9").click(function(){
+				$("#fto").fadeTo("slow",0.3);
+			});
+			// fadeIn, fadeOut, fadeToggle, fadeTo end
+			// slideUp, slideDown, slideToggle start
+			$(".btn_10").click(function(){
+				$("#su_sd").slideUp(2000);
+			});
+			$(".btn_11").click(function(){
+				$("#su_sd").slideDown("slow");
+			});
+			$(".btn_12").click(function(){
+				$("#st").slideToggle("fast");
+			});
+			// slideUp, slideDown, slideToggle end
+			// Even, Odd, First, Last & Nth Element Selectors start
+			    $("li:odd").addClass("odd");
+    			$("li:even").addClass("even");
+    			$("li:first").addClass("first");
+    			$("li:last").addClass("last");
+    			$("li:eq(3)").addClass("nth"); 
+			// Even, Odd, First, Last & Nth Element Selectors end
+			// This, Header, Not Selectors start
+			// This Selectors start
+		    $("p").click(function(){
+		        $(this).hide("fast");
+		    });
+			// This Selectors end
+			// Header Selectors start
+    		$(":header").fadeOut(3000);
+
+			// Header Selectors end
+			// This, Header, Not Selectors end
+    	});
+    	
+    </script>
+  </body>
+</html>
