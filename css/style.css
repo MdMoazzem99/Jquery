@@ -37,3 +37,11 @@
     padding: 10px;
 }
 /*Even, Odd, First, Last & Nth Element Selectors end*/
+/*Contains | Attribute| Form field Selectors start*/
+/*Form Field Selectors start*/
+.fn{
+    border: 2px solid red;
+    outline: none;
+}
+/*Form Field Selectors end*/
+/*Contains | Attribute| Form field Selectors end*/
