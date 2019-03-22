@@ -37,9 +37,9 @@
 	<span style="font-size: 40px">slideUp, slideDown, slideToggle</span><br>
 	<span style="font-size: 30px" id="su_sd">slideUp, slideDown</span><br>
 	<button type="button" class="btn_10 btn-danger">slideUp</button>
-	<button type="button" class="btn_11 btn-danger">slideDown</button><br>
-	<span style="font-size: 30px" id="st">slideToggle</span><br>
-	<div type="button" class="btn_12">slideToggle</div><br>
+	<button type="button" class="btn_11 btn-danger">slideDown</button><br><br>
+	<span style="font-size: 30px" id="st">slideToggle</span><br><br>
+	<div type="button" class="btn_12">slideToggle</div>
 	<span style="font-size: 40px">Even, Odd, First, Last & Nth Element Selectors</span><br>
 	<ul class="list-unstyled">
         <li>Home</li>
@@ -50,7 +50,7 @@
         <li>Company Profile</li>
         <li>Contact Us</li>
 	</ul><br>
-	<span style="font-size: 40px">This, Header, Not Selectors</span><br>
+	<span style="font-size: 40px">This | Header | Not Selectors</span><br>
 	<span style="font-size: 30px">This Selectors</span>
 	<p>This is Rifat</p>
 	<p>This is Rahat</p>
@@ -58,14 +58,37 @@
 	<p>This is Momo</p>
 	<p>This is Eva</p>
 	<span style="font-size: 30px">Header Selectors</span>
-	<h1>This is Rifat</h1>
-	<h2>This is Rahat</h2>
-	<h3>This is Ridoy</h3>
-	<h4>This is Momo</h4>
-	<h5>This is Eva</h5>
-	<h6>This is You</h6>
-
-
+	<h1 id="header">This is Rifat</h1>
+	<h2 id="header">This is Rahat</h2>
+	<h3 id="header">This is Ridoy</h3>
+	<h4 id="header">This is Momo</h4>
+	<h5 id="header">This is Eva</h5>
+	<h6 id="header">This is You</h6>
+	<span style="font-size: 30px">Not Selectors</span>
+	<h1 id="header_1">This is Rifat</h1>
+	<h2 id="header_1">This is Rahat</h2>
+	<h2 id="header_1">This is Rahat</h2>
+	<h3 id="header_1">This is Ridoy</h3>
+	<h4 id="header_1">This is Momo</h4>
+	<h5 id="header_1">This is Eva</h5>
+	<h6 id="header_1">This is You</h6>
+	<span style="font-size: 40px">Contains | Attribute| Form field Selectors</span><br>
+	<span style="font-size: 30px">Contains Selectors</span>
+	<h3 id="h3">07 Rifat Willes</h3>
+	<h3 id="h3">05 Rahat Willes</h3>
+	<h3 id="h3">100 Rifat Final Math</h3>
+	<h3 id="h3">100 Rahat Final Math</h3>
+	<button type="button" class="btn_13 btn-danger">Show Student Performance</button>
+	<span style="font-size: 30px">Attribute Selectors</span><br>
+	<a href="#" title="GIS" class="well well-sm">Grameen IT Solution</a><br>
+	<a href="#" title="FB" class="well well-sm">Facebook</a><br> 
+	<a href="#" title="TW" class="well well-sm">Twitter</a><br>
+	<button type="button" class="btn_14 btn-danger">fadeOut</button><br>
+	<span style="font-size: 30px">Form Field Selectors</span>
+	<form >
+		First Name : <input type="text"  name="firstname" >
+		Password : <input type="password" name="password" id="password">
+	</form>
 
 
 
@@ -125,23 +148,49 @@
 			});
 			// slideUp, slideDown, slideToggle end
 			// Even, Odd, First, Last & Nth Element Selectors start
+			$("li").click(function(){
 			    $("li:odd").addClass("odd");
     			$("li:even").addClass("even");
     			$("li:first").addClass("first");
     			$("li:last").addClass("last");
-    			$("li:eq(3)").addClass("nth"); 
+    			$("li:eq(3)").addClass("nth");
+    		}); 
 			// Even, Odd, First, Last & Nth Element Selectors end
-			// This, Header, Not Selectors start
+			// This | Header | Not Selectors start
 			// This Selectors start
 		    $("p").click(function(){
 		        $(this).hide("fast");
 		    });
 			// This Selectors end
 			// Header Selectors start
-    		$(":header").fadeOut(3000);
-
+			$("#header").click(function(){
+    			$(":header").fadeOut(3000);
+    		});
 			// Header Selectors end
-			// This, Header, Not Selectors end
+			// Not Selectors start
+			$("#header_1").click(function(){
+    			$("h2:not(h2:eq(5))").fadeOut(3000);
+    		});
+			// Not Selectors end
+			// This | Header | Not Selectors end
+			// Contains | Attribute| Form field Selectors start
+			// Contains Selectors start
+			$("#h3").hide();
+    		$(".btn_13").click(function(){
+        		$("h3:contains('Rifat')").fadeIn(2000);
+    		});
+			// Contains Selectors end
+			// Attribute Selectors start
+			$(".btn_14").click(function(){
+				$("a[title='TW']").fadeOut(3000);
+			});
+			// Attribute Selectors end
+			// Form Field Selectors start
+			$("#password").click(function(){
+				$(":input:password").addClass("fn");
+			});
+			// Form Field Selectors end
+			// Contains | Attribute| Form field Selectors end
     	});
     	
     </script>
